@@ -6,6 +6,7 @@ License: GPLv3
 Group:   System/Servers
 URL:     https://edge.launchpad.net/notify-osd
 Source0: %{name}_%{version}-0ubuntu4.tar.gz
+Source1: dbus.service
 BuildRequires: dbus-glib-devel
 BuildRequires: gtk2-devel
 BuildRequires: libGConf2-devel
@@ -47,6 +48,7 @@ for an application in different scenarios.
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+sed 's,{libdir},%{_libdir},' %SOURCE1 >%{buildroot}%{_datadir}/dbus-1/services/org.freedesktop.Notifications.service
 
 %find_lang %{name}
 
