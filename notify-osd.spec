@@ -1,11 +1,11 @@
 Name:    notify-osd
 Summary: On-screen notification display agent, implementing the FDO notification specification
-Version: 0.8
+Version: 0.9.14.1
 Release: %mkrel 1
 License: GPLv3
 Group:   System/Servers
-URL:     https://edge.launchpad.net/notify-osd
-Source0: %{name}_%{version}-0ubuntu4.tar.gz
+URL:     https://launchpad.net/notify-osd
+Source0: http://launchpad.net/notify-osd/0.9/%{name}-%{version}/+download/%{name}-%{version}.tar.gz
 Source1: dbus.service
 BuildRequires: dbus-glib-devel
 BuildRequires: gtk2-devel
@@ -39,7 +39,7 @@ use of the framework for developers, which helps determine the right approach
 for an application in different scenarios.
 
 %prep
-%setup -q -n %{name}-ubuntu
+%setup -q
 
 %build
 %configure
@@ -61,4 +61,6 @@ rm -rf %{buildroot}
 %doc AUTHORS ChangeLog README
 %{_libdir}/%{name}
 %{_datadir}/dbus-1/services/*
-%{_datadir}/notify_osd/icons/notification-*.svg
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/icons/hicolor/scalable/status/README
+%{_datadir}/%{name}/icons/hicolor/scalable/status/notification-*.svg
