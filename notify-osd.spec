@@ -11,6 +11,7 @@ BuildRequires: dbus-glib-devel
 BuildRequires: gtk2-devel
 BuildRequires: libGConf2-devel
 BuildRequires: libnotify-devel
+BuildRequires: libwnck-devel
 BuildRequires: intltool
 Provides:  virtual-notification-daemon
 Conflicts: xfce4-notifyd
