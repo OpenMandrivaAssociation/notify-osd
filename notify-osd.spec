@@ -1,13 +1,12 @@
 Name:    notify-osd
 Summary: On-screen notification display agent, implementing the FDO notification specification
-Version: 0.9.15
+Version: 0.9.16
 Release: %mkrel 1
 License: GPLv3
 Group:   System/Servers
 URL:     https://launchpad.net/notify-osd
-Source0: http://launchpad.net/notify-osd/0.9/%{name}-%{version}/+download/%{name}-%{version}.tar.gz
+Source0: http://launchpad.net/notify-osd/0.9/%{version}/+download/%{name}-%{version}.tar.gz
 Source1: dbus.service
-Patch0:  notify-osd-0.9.15-missing-headers.patch
 BuildRequires: dbus-glib-devel
 BuildRequires: gtk2-devel
 BuildRequires: libGConf2-devel
@@ -42,7 +41,6 @@ for an application in different scenarios.
 
 %prep
 %setup -q
-%apply_patches
 
 %build
 %configure
