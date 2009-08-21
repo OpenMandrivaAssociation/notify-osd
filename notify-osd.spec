@@ -1,6 +1,6 @@
 Name:    notify-osd
 Summary: On-screen notification display agent, implementing the FDO notification specification
-Version: 0.9.17
+Version: 0.9.18
 Release: %mkrel 1
 License: GPLv3
 Group:   System/Servers
