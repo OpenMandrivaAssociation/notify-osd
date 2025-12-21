@@ -7,6 +7,11 @@ Group:   System/Servers
 URL:     https://launchpad.net/notify-osd
 Source0: http://launchpad.net/notify-osd/0.9/%{version}/+download/%{name}-%{version}.tar.gz
 Source1: dbus.service
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: dbus-glib-devel
 BuildRequires: gtk2-devel
 BuildRequires: libGConf2-devel
